@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --brand-primary: #728639; /* OMC Primary - Olive green */
+  --brand-secondary: #5a6b2d; /* Darker olive green */
+  --brand-accent: #d4af37; /* Gold */
+  --brand-accent-light: #f4e4bc; /* Light gold */
+  --brand-dark: #062E03; /* Deep forest green (for headers/hero backgrounds) */
+  --brand-light: #f8fafc; /* Off-white */
+  
+  /* Base Colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Typography - Twitter Font Family */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: var(--font-playfair);
+  --font-base-size: 18px;
+}
+
+@theme inline {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-light: var(--brand-accent-light);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-light: var(--brand-light);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 14px; /* Reduced from 18px on mobile */
+  line-height: 1.6;
+}
+
+/* Reduced base font sizes for mobile */
+h1 {
+  font-size: 1.75rem; /* Reduced from 2.5rem */
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem; /* Reduced from 2rem */
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem; /* Reduced from 1.75rem */
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.125rem; /* Reduced from 1.5rem */
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem; /* Reduced from 1.25rem */
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 0.875rem; /* Reduced from 1.125rem */
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.875rem; /* Reduced from 1.125rem */
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px; /* Increased for tablet */
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+    font-size: 2.75rem;
+  }
+  
+  h3 {
+    font-size: 2.25rem;
+  }
+  
+  h4 {
+    font-size: 1.875rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px; /* Increased for desktop */
+  }
+  
+  h1 {
+    font-size: 4.5rem;
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+  }
+  
+  h3 {
+    font-size: 2.75rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
