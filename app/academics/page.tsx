@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, GraduationCap, Award, Globe, Users, Briefcase, Heart } from "lucide-react";
 import { allKeyStages } from "@/src/data/curriculum";
 import { brandConfig } from "@/src/config/brand";
-import Link from "next/link";
 
 export default function AcademicsPage() {
   return (
