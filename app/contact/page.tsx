@@ -104,10 +104,17 @@ export default function ContactPage() {
                 <div className="flex items-center gap-4">
                   <Phone className="h-6 w-6 text-brand-accent flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <a href={`tel:${brandConfig.contact.phone}`} className="text-gray-600 hover:text-brand-primary transition-colors">
-                      {brandConfig.contact.phone}
-                    </a>
+                    <h3 className="font-semibold text-gray-900">Phone (Front Desk Officer)</h3>
+                    <div className="space-y-1">
+                      <a href={`tel:${brandConfig.contact.phone}`} className="block text-gray-600 hover:text-brand-primary transition-colors">
+                        {brandConfig.contact.phone} (WhatsApp)
+                      </a>
+                      {brandConfig.contact.phoneSecondary && (
+                        <a href={`tel:${brandConfig.contact.phoneSecondary}`} className="block text-gray-600 hover:text-brand-primary transition-colors">
+                          {brandConfig.contact.phoneSecondary}
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -122,11 +129,9 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 rounded-lg bg-brand-light p-6">
-                <h3 className="mb-3 font-semibold text-brand-primary">Office Hours</h3>
+                <h3 className="mb-3 font-semibold text-brand-primary">School Hours</h3>
                 <p className="text-gray-700">
-                  Monday - Friday: 8:00 AM - 5:00 PM<br />
-                  Saturday: 9:00 AM - 1:00 PM<br />
-                  Sunday: Closed
+                  {brandConfig.schoolHours?.display || "7:00 AM – 3:30 PM"}
                 </p>
               </div>
             </div>

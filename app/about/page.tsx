@@ -3,6 +3,7 @@
 import Layout from "@/src/components/Layout";
 import Breadcrumbs from "@/src/components/Breadcrumbs";
 import SectionHeading from "@/src/components/SectionHeading";
+import LeadershipCarousel from "@/src/components/LeadershipCarousel";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { leadership } from "@/src/data/staff";
@@ -19,7 +20,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <SectionHeading
             title="About Oxford Manor College"
-            subtitle="Excellence Through Knowledge, Character Through Service"
+            subtitle={brandConfig.tagline}
           />
           
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -43,33 +44,47 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <h2 className="mb-4 font-serif text-3xl font-bold text-brand-primary">
-                Our Story
+                About the School
               </h2>
               <p className="mb-4 text-lg text-gray-600">
-                Founded with a vision to provide world-class education that combines
-                the best of British educational traditions with Nigerian values and
-                global perspectives, Oxford Manor College has been nurturing young
-                minds for excellence since its establishment.
+                Oxford Manor College is a British-style secondary school located in Abuja, Nigeria. 
+                Established in {brandConfig.established}, the school provides a structured, internationally 
+                aligned education designed to prepare students for academic success, strong character, 
+                and responsible global citizenship.
               </p>
-              <p className="mb-4 text-lg text-gray-600">
-                We believe that education extends far beyond academic achievement.
-                Our holistic approach ensures that every student develops not only
-                intellectual capabilities but also strong character, leadership
-                skills, and a sense of social responsibility.
-              </p>
-              <p className="text-lg text-gray-600">
-                Today, we stand as one of Nigeria's premier educational institutions,
-                recognized for our outstanding academic results, exceptional
-                facilities, and commitment to developing well-rounded individuals
-                prepared for success in an increasingly interconnected world.
-              </p>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p><strong>Type:</strong> British-style secondary school (Day School)</p>
+                <p><strong>Established:</strong> {brandConfig.established}</p>
+                <p><strong>Location:</strong> {brandConfig.contact.address}</p>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
+      {/* Vision */}
+      <section id="vision" className="bg-brand-light py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl rounded-lg bg-white p-8 shadow-md"
+          >
+            <h3 className="mb-4 font-serif text-2xl font-bold text-brand-primary">
+              Vision Statement
+            </h3>
+            <p className="text-lg text-gray-600">
+              We are committed to continuously striving to prepare all scholars to become lifelong learners, 
+              responsible global citizens, ready to meet and provide solutions to the challenges of the future 
+              in partnership with families and the wider community.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Mission & Values */}
-      <section id="mission" className="bg-brand-light py-20">
+      <section id="mission" className="py-20">
         <div className="container mx-auto px-4">
           <SectionHeading title="Our Mission & Values" />
           
@@ -81,12 +96,12 @@ export default function AboutPage() {
               className="rounded-lg bg-white p-8 shadow-md"
             >
               <h3 className="mb-4 font-serif text-2xl font-bold text-brand-primary">
-                Our Mission
+                Mission Statement
               </h3>
               <p className="text-gray-600">
-                To provide an exceptional education that empowers students to achieve
-                their full potential, develop strong character, and become responsible
-                global citizens who contribute positively to society.
+                Our goal is to provide a world-class learning environment and opportunities for scholars, 
+                both inside and outside the classroom, that help them develop the knowledge, critical thinking 
+                skills, leadership, and right character essential to succeed globally using world-best dynamic approaches.
               </p>
             </motion.div>
             
@@ -97,17 +112,40 @@ export default function AboutPage() {
               className="rounded-lg bg-white p-8 shadow-md"
             >
               <h3 className="mb-4 font-serif text-2xl font-bold text-brand-primary">
-                Our Values
+                Core Values
               </h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Excellence in all endeavors</li>
-                <li>• Integrity and ethical behavior</li>
-                <li>• Respect for diversity</li>
-                <li>• Innovation and creativity</li>
-                <li>• Service to community</li>
+              <ul className="space-y-3 text-gray-600">
+                <li>• <strong>Manners and Respect</strong></li>
+                <li>• <strong>Leadership and Character</strong></li>
+                <li>• <strong>Tolerance and Inclusion</strong></li>
+                <li>• <strong>Excellence and Results-Driven Learning</strong></li>
+                <li>• <strong>Determination and Curiosity to Learn</strong></li>
               </ul>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Educational Philosophy */}
+      <section id="philosophy" className="bg-brand-light py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-4xl rounded-lg bg-white p-8 shadow-md"
+          >
+            <h3 className="mb-4 font-serif text-2xl font-bold text-brand-primary">
+              Educational Philosophy
+            </h3>
+            <p className="text-lg text-gray-600">
+              Oxford Manor College believes that excellence is achieved through high expectations, purposeful 
+              teaching, and strong character formation. The school provides a balanced, rigorous, and 
+              student-centred learning environment that challenges scholars academically while nurturing 
+              discipline, curiosity, leadership, and independent thinking. Education extends beyond the 
+              classroom to prepare students for lifelong learning and responsible global citizenship.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -119,31 +157,14 @@ export default function AboutPage() {
             subtitle="Experienced educators dedicated to student success"
           />
           
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {leadership.map((member, index) => (
-              <motion.div
-                key={member.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-lg bg-white p-6 text-center shadow-md"
-              >
-                <div className="mb-4 aspect-square overflow-hidden rounded-full bg-gray-200">
-                  {/* Image would go here */}
-                </div>
-                <h3 className="mb-2 font-serif text-xl font-bold text-brand-primary">
-                  {member.name}
-                </h3>
-                <p className="mb-3 text-sm font-semibold text-brand-accent">
-                  {member.role}
-                </p>
-                <p className="text-sm text-gray-600 line-clamp-3">
-                  {member.bio}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <LeadershipCarousel members={leadership} />
+          </motion.div>
         </div>
       </section>
     </Layout>

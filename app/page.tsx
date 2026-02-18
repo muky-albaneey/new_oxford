@@ -66,9 +66,8 @@ export default function HomePage() {
   return (
     <Layout>
       <Hero
-        title="Excellence Favours The Bold"
-        // subtitle="THE"
-        description="THE Oxford Manor College is a place of curiosity and adventure, where enthusiastic and bright young minds are encouraged to be bold and undaunted in their thoughts, actions, and dreams for the future and to discover the scope of their brilliance."
+        title="Raising an indomitable generation"
+        description="Oxford Manor College is a British-style secondary school in Abuja, Nigeria, providing a structured, internationally aligned education designed to prepare students for academic success, strong character, and responsible global citizenship."
         ctaLabel="Explore Our Curriculum"
         ctaHref="/academics"
         video="/videos/hero-school.mp4"

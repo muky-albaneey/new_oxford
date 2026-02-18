@@ -28,61 +28,67 @@ export default function PastoralCarePage() {
           <div className="mx-auto max-w-4xl space-y-8">
             <div className="rounded-lg bg-white p-8 shadow-md">
               <h2 className="mb-4 font-serif text-2xl font-bold text-brand-primary">
-                Our Approach
+                Student Life & Pastoral Care
               </h2>
               <p className="mb-4 text-lg text-gray-600">
-                At Oxford Manor College, we believe that academic success goes hand-in-hand
-                with personal wellbeing and character development. Our comprehensive pastoral
-                care system ensures that every student receives the support they need to
-                thrive.
-              </p>
-              <p className="text-lg text-gray-600">
-                Our dedicated team of tutors, house parents, counselors, and support staff
-                work together to create a nurturing environment where students feel safe,
-                valued, and empowered to reach their full potential.
+                The school provides a supportive pastoral environment that promotes positive behaviour, 
+                wellbeing, and personal responsibility. Structured systems, including form tutoring and 
+                behaviour monitoring, ensure that every student is guided and supported throughout their 
+                school journey.
               </p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="rounded-lg bg-brand-light p-6">
                 <h3 className="mb-3 font-serif text-xl font-bold text-brand-primary">
-                  House System
+                  Pastoral Structure
                 </h3>
-                <p className="text-gray-700">
-                  Every student belongs to a house, creating a sense of community and
-                  belonging. Houses compete in various activities while fostering
-                  camaraderie and support.
-                </p>
+                <div className="space-y-3 text-gray-700">
+                  <p><strong>House Point System:</strong> Points are awarded or deducted based on behaviour, 
+                  encouraging positive conduct and accountability.</p>
+                  <p><strong>Form Tutors:</strong> Each class is assigned a form tutor who provides guidance, 
+                  monitors progress, and serves as the primary point of contact.</p>
+                </div>
               </div>
 
               <div className="rounded-lg bg-brand-light p-6">
                 <h3 className="mb-3 font-serif text-xl font-bold text-brand-primary">
-                  Personal Tutors
+                  Student Wellbeing
                 </h3>
-                <p className="text-gray-700">
-                  Each student has a personal tutor who monitors their academic progress,
-                  provides guidance, and serves as the primary point of contact for parents.
-                </p>
+                <div className="space-y-3 text-gray-700">
+                  <p>• Counselling services available</p>
+                  <p>• Open access to Vice Principal (Pastoral)</p>
+                  <p>• Balanced behaviour and discipline approach</p>
+                </div>
               </div>
+            </div>
 
-              <div className="rounded-lg bg-brand-light p-6">
-                <h3 className="mb-3 font-serif text-xl font-bold text-brand-primary">
-                  Counseling Services
-                </h3>
-                <p className="text-gray-700">
-                  Professional counselors are available to support students with personal,
-                  social, and emotional challenges, ensuring mental health and wellbeing.
-                </p>
-              </div>
-
-              <div className="rounded-lg bg-brand-light p-6">
-                <h3 className="mb-3 font-serif text-xl font-bold text-brand-primary">
-                  Character Education
-                </h3>
-                <p className="text-gray-700">
-                  Regular assemblies, workshops, and activities focus on developing values
-                  such as integrity, respect, responsibility, and empathy.
-                </p>
+            <div className="rounded-lg bg-white p-8 shadow-md">
+              <h2 className="mb-4 font-serif text-2xl font-bold text-brand-primary">
+                Student Leadership
+              </h2>
+              <p className="mb-4 text-lg text-gray-600">
+                Oxford Manor College encourages leadership and service through student representation and 
+                responsibility roles. Students are given opportunities to develop confidence, accountability, 
+                and leadership skills within the school community.
+              </p>
+              <div className="mt-6">
+                <h3 className="mb-3 font-semibold text-brand-primary">Student Council</h3>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Head Boy</li>
+                    <li>• Head Girl</li>
+                    <li>• Health Prefect</li>
+                    <li>• Sports Prefect</li>
+                    <li>• Library Prefect</li>
+                  </ul>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Administrative Prefect</li>
+                    <li>• Punctuality Prefect</li>
+                    <li>• Disciplinary Prefect</li>
+                    <li>• Other prefect roles</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
