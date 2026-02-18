@@ -81,7 +81,7 @@ export default function Hero({
       className="relative flex min-h-screen flex-col items-center overflow-hidden bg-white md:flex-row"
     >
       {/* Left Side - Colored Background with Text */}
-      <div className="relative z-10 flex min-h-[50vh] w-full flex-col justify-center bg-brand-primary px-8 py-12 md:min-h-screen md:w-3/5 md:px-16 md:py-20 lg:px-24 overflow-hidden">
+      <div className="relative z-10 flex min-h-[50vh] w-full flex-col justify-center px-8 py-12 md:min-h-screen md:w-3/5 md:px-16 md:py-20 lg:px-24 overflow-hidden" style={{ backgroundColor: '#358600' }}>
         {/* Animated Mathematical Formulas Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 5 }}>
           {[
@@ -514,11 +514,11 @@ export default function Hero({
           {/* Diagonal Overlay from Left - Matching LEH style */}
           <div className="absolute inset-0 z-[2] pointer-events-none">
             {/* Mobile: Simple gradient overlay from top */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/70 via-brand-primary/40 to-transparent md:hidden"></div>
+            <div className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(to top, rgba(53, 134, 0, 0.7), rgba(53, 134, 0, 0.4), transparent)' }}></div>
             {/* Desktop: Gradient overlay with diagonal */}
-            <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-brand-primary/60 via-brand-primary/50 to-transparent md:bg-gradient-to-br md:from-brand-primary/50 md:via-brand-primary/40 md:to-transparent"></div>
+            <div className="hidden md:block absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(53, 134, 0, 0.6), rgba(53, 134, 0, 0.5), transparent)' }}></div>
             {/* Diagonal cut overlay - desktop only */}
-            <div className="hidden md:block absolute left-0 top-0 h-full w-1/3 origin-top-left -skew-x-12 bg-brand-primary/80 md:w-2/5"></div>
+            <div className="hidden md:block absolute left-0 top-0 h-full w-1/3 origin-top-left -skew-x-12 md:w-2/5" style={{ backgroundColor: 'rgba(53, 134, 0, 0.8)' }}></div>
           </div>
         </div>
       </div>

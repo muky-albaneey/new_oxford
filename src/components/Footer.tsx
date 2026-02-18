@@ -49,11 +49,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="mb-4 inline-block">
               <Image
-                src={brandConfig.logo.svg}
+                src={brandConfig.logo.jpeg}
                 alt={`${brandConfig.name} Logo`}
                 width={180}
                 height={54}
-                className="h-auto w-auto brightness-0 invert"
+                className="h-auto w-auto"
               />
             </Link>
             <p className="mb-4 text-xs sm:text-sm text-gray-300">

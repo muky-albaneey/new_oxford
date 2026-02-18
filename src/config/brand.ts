@@ -30,13 +30,14 @@ export const brandConfig = {
     secondary: "#5a6b2d", // Darker olive green
     accent: "#d4af37", // Gold
     accentLight: "#f4e4bc", // Light gold
-    dark: "#062E03", // Deep forest green (for headers/hero backgrounds)
+    dark: "#0f172a", // Initial dark blue/navy (for headers/hero backgrounds)
     light: "#f8fafc", // Off-white
   },
   
   logo: {
-    svg: "/brand/logo.svg",
-    png: "/brand/logo.png",
+    svg: "/images/omc_logo.jpeg",
+    png: "/images/omc_logo.jpeg",
+    jpeg: "/images/omc_logo.jpeg",
   },
 } as const;
 

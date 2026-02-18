@@ -97,12 +97,12 @@ export default function Header() {
           <div className="flex h-16 sm:h-20 items-center justify-between">
             <Link href="/" className="flex items-center">
               <Image
-                src={brandConfig.logo.svg}
+                src={brandConfig.logo.jpeg}
                 alt={`${brandConfig.name} Logo`}
-                width={180}
-                height={54}
+                width={60}
+                height={16}
                 priority
-                className="h-auto w-32 sm:w-auto"
+                className="h-auto w-10 sm:w-28 md:w-auto"
               />
             </Link>
 
