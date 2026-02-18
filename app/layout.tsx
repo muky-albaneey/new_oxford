@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   description: brandConfig.tagline,
   keywords: ["Oxford Manor College", "Private School", "Nigeria", "Cambridge IGCSE", "A-Levels", "Education"],
   authors: [{ name: brandConfig.name }],
+  icons: {
+    icon: brandConfig.logo.jpeg,
+    apple: brandConfig.logo.jpeg,
+    shortcut: brandConfig.logo.jpeg,
+  },
   openGraph: {
     type: "website",
     locale: "en_NG",
@@ -30,6 +35,20 @@ export const metadata: Metadata = {
     siteName: brandConfig.name,
     title: brandConfig.name,
     description: brandConfig.tagline,
+    images: [
+      {
+        url: brandConfig.logo.jpeg,
+        width: 180,
+        height: 54,
+        alt: `${brandConfig.name} Logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: brandConfig.name,
+    description: brandConfig.tagline,
+    images: [brandConfig.logo.jpeg],
   },
 };
 
