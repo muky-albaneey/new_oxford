@@ -7,7 +7,6 @@ import SectionHeading from "@/src/components/SectionHeading";
 import NewsCard from "@/src/components/NewsCard";
 import EventCard from "@/src/components/EventCard";
 import TestimonialCard from "@/src/components/TestimonialCard";
-import CTASection from "@/src/components/CTASection";
 import StudentImageGallery from "@/src/components/StudentImageGallery";
 import StudentLifeSection from "@/src/components/StudentLifeSection";
 import Link from "next/link";
@@ -21,22 +20,12 @@ import { getUpcomingEvents } from "@/src/data/events";
 export default function HomePage() {
   const stats = [
     {
-      value: "850+",
-      label: "Students",
-      icon: Users,
-    },
-    {
-      value: "1:12",
-      label: "Teacher Ratio",
-      icon: GraduationCap,
-    },
-    {
       value: "95%",
       label: "A*-C Grades",
       icon: BookOpen,
     },
     {
-      value: "40+",
+      value: "10+",
       label: "Clubs & Societies",
       icon: Trophy,
     },
@@ -105,17 +94,17 @@ export default function HomePage() {
                 {
                   src: "/images/students/students-2.jpeg",
                   alt: "Students in science lab",
-                  category: "Science",
+                  category: "Sport",
                 },
                 {
                   src: "/images/students/students-3.jpeg",
                   alt: "Students playing sports",
-                  category: "Sports",
+                  category: "Sports (taekwondo)",
                 },
                 {
                   src: "/images/students/students-4.jpeg",
                   alt: "Students in art class",
-                  category: "Arts",
+                  category: "Cultural day",
                 },
                 {
                   src: "/images/students/students-5.jpg",
@@ -123,19 +112,19 @@ export default function HomePage() {
                   category: "Study",
                 },
                 {
-                  src: "/images/students/students-6.jpeg",
+                  src: "/images/students/community1.jpeg",
                   alt: "Students at assembly",
                   category: "Community",
                 },
                 {
                   src: "/images/students/students-7.jpg",
                   alt: "Students in drama",
-                  category: "Performing Arts",
+                  category: "Extra Options",
                 },
                 {
-                  src: "/images/students/students-8.jpeg",
+                  src: "/images/students/excursion.jpeg",
                   alt: "Students working together",
-                  category: "Collaboration",
+                  category: "Excursions",
                 },
               ]}
             />
@@ -143,29 +132,29 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Large Text Section - LEH Style */}
+      {/* Large Text Section - LEH Style (Creativity Favours The Bold) */}
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-white py-32">
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, margin: "-100px" }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <motion.h2 
                 className="mb-6 font-serif text-5xl font-bold leading-tight text-brand-primary md:text-6xl lg:text-7xl" 
                 style={{ textTransform: 'uppercase' }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false }}
-                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
                 >
                   Creativity
                 </motion.span>
@@ -174,8 +163,8 @@ export default function HomePage() {
                   className="text-3xl md:text-4xl lg:text-5xl font-normal"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.15 }}
                 >
                   Favours The
                 </motion.span>
@@ -183,8 +172,8 @@ export default function HomePage() {
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   Bold
                 </motion.span>
@@ -192,8 +181,8 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 whileHover={{ scale: 1.05 }}
               >
                 <Link
@@ -205,24 +194,20 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 50, scale: 0.95 }}
-              whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              viewport={{ once: false, margin: "-100px" }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-              whileHover={{ scale: 1.02 }}
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               className="relative aspect-[4/3] overflow-hidden rounded-lg"
             >
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className="h-full w-full transition-transform duration-300 hover:scale-105">
                 <Image
                   src="/images/students/students-10.jpeg"
                   alt="Students creating"
                   fill
                   className="object-cover"
                 />
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -823,15 +808,6 @@ export default function HomePage() {
           </div>
     </div>
       </section>
-
-      {/* Final CTA */}
-      <CTASection
-        title="Ready to Begin Your Journey?"
-        description="Join the Oxford Manor College community and discover your potential"
-        primaryCTA={{ label: "Start Your Application", href: "/admissions/how-to-apply" }}
-        secondaryCTA={{ label: "Book a Campus Tour", href: "/admissions/book-a-tour" }}
-        variant="primary"
-      />
     </Layout>
   );
 }

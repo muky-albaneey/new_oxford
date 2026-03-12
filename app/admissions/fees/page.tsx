@@ -48,7 +48,7 @@ export default function FeesPage() {
           
           <div className="mx-auto max-w-4xl">
             <div className="mb-8 overflow-hidden rounded-lg shadow-md">
-              <table className="w-full">
+              {/* <table className="w-full">
                 <thead className="bg-brand-primary text-white">
                   <tr>
                     <th className="px-6 py-4 text-left font-semibold">Level</th>
@@ -74,7 +74,7 @@ export default function FeesPage() {
                     </tr>
                   ))}
                 </tbody>
-              </table>
+              </table> */}
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
@@ -83,10 +83,11 @@ export default function FeesPage() {
                   Additional Fees
                 </h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Application Fee: ₦25,000 (non-refundable)</li>
-                  <li>• Entrance Assessment: ₦15,000</li>
-                  <li>• Development Levy: ₦100,000 (one-time, new students)</li>
-                  <li>• Uniform & Books: As per list (approximately ₦150,000)</li>
+                  <li>• Application Fee (non-refundable)</li>
+                  <li>• Entrance Assessment</li>
+                  <li>• Development Levy (one-time, new students)</li>
+                  <li>• Uniform As per list </li>
+                  <li>• Resources As per list </li>
                 </ul>
               </div>
 
@@ -94,22 +95,76 @@ export default function FeesPage() {
                 <h3 className="mb-4 font-serif text-xl font-bold text-brand-primary">
                   Scholarships & Bursaries
                 </h3>
-                <p className="mb-3 text-gray-700">
-                  We offer merit-based scholarships and need-based bursaries to
-                  outstanding students. Scholarships are awarded based on:
+                <p className="mb-4 text-gray-700">
+                  Are you dreaming of pursuing quality education but worried about
+                  the financial burden? Don&apos;t let financial constraints hold you
+                  back. Apply for our student scholarships and unlock the doors to a
+                  brighter future.
                 </p>
+
+                {/* Original simple criteria list (with specific items commented out per request)
                 <ul className="space-y-2 text-gray-700">
                   <li>• Academic excellence</li>
                   <li>• Special talents (sports, arts, leadership)</li>
                   <li>• Financial need</li>
                   <li>• Sibling discounts available</li>
                 </ul>
+                */}
+
+                <div className="mb-4 space-y-2 text-sm text-gray-700">
+                  <p className="font-semibold text-brand-primary">
+                    Why Choose Our Scholarships?
+                  </p>
+                  <ul className="ml-4 list-disc space-y-1">
+                    <li>
+                      <strong>Quality Education:</strong> We believe in the power of
+                      quality education to transform lives and build a brighter
+                      future.
+                    </li>
+                    <li>
+                      <strong>Supporting Diversity:</strong> Our scholarships aim to
+                      support students from diverse backgrounds and empower them to
+                      reach their full potential.
+                    </li>
+                    <li>
+                      <strong>Making Dreams Possible:</strong> Whether you&apos;re
+                      passionate about academics, leadership, or the arts, we have a
+                      scholarship to help you pursue your dreams.
+                    </li>
+                    <li>
+                      <strong>Sibling Discounts:</strong> Sibling discounts are
+                      available to support families with more than one child at
+                      Oxford Manor College.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="space-y-2 text-sm text-gray-700">
+                  <p className="font-semibold text-brand-primary">How to Apply</p>
+                  <p>
+                    For application details and forms, please contact{" "}
+                    <a
+                      href="tel:+2348176067809"
+                      className="font-semibold text-brand-primary"
+                    >
+                      +234-817-606-7809
+                    </a>{" "}
+                    or{" "}
+                    <a
+                      href="tel:+2348100317281"
+                      className="font-semibold text-brand-primary"
+                    >
+                      +234-810-031-7281
+                    </a>{" "}
+                    for more information.
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="mt-8 rounded-lg bg-brand-light p-6">
               <p className="text-gray-700">
-                <strong>Note:</strong> Fees are subject to annual review. Payment plans
+                <strong>Note:</strong> Fees are subject to periodic review. Payment plans
                 are available. For more information about fees, scholarships, or
                 payment options, please contact our admissions office.
               </p>

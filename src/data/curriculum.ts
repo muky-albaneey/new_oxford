@@ -16,7 +16,7 @@ export interface KeyStage {
 
 export const keyStage3: KeyStage = {
   id: "ks3",
-  name: "Lower Secondary (Years 7-9)",
+  name: "Lower Secondary (Years 10-14)",
   description: "Our Lower Secondary program follows the Cambridge Lower Secondary framework, providing a broad and balanced curriculum that builds strong foundations across all subject areas. Students develop critical thinking skills, creativity, and a love for learning while preparing for Cambridge Checkpoint Examinations in Year 9.",
   ageRange: "Years 7-9",
   subjects: [
@@ -88,7 +88,7 @@ export const keyStage3: KeyStage = {
 
 export const keyStage4: KeyStage = {
   id: "ks4",
-  name: "Upper Secondary (Years 10-11) - Cambridge IGCSE",
+  name: "Upper Secondary (Years 14-16) - Cambridge IGCSE",
   description: "Upper Secondary (Years 10-11) focuses on Cambridge IGCSE qualifications, providing internationally recognized qualifications that prepare students for A-Levels and university. Students study a combination of core and optional subjects, with external examinations in Year 11.",
   ageRange: "Years 10-11",
   subjects: [
@@ -179,44 +179,44 @@ export const keyStage4: KeyStage = {
   ],
 };
 
-export const sixthForm: KeyStage = {
-  id: "sixth-form",
-  name: "Sixth Form (A-Levels)",
-  description: "Our Sixth Form (Years 12-13) offers Cambridge International A-Levels, providing rigorous academic preparation for university. Students typically study 3-4 A-Level subjects in depth, allowing for specialization while maintaining breadth. We also offer WAEC A-Levels for students pursuing Nigerian universities.",
-  ageRange: "16-18 years",
-  subjects: [
-    {
-      id: "sciences",
-      name: "Sciences",
-      description: "Mathematics, Further Mathematics, Physics, Chemistry, Biology, Computer Science.",
-    },
-    {
-      id: "humanities",
-      name: "Humanities & Social Sciences",
-      description: "History, Geography, Economics, Business Studies, Psychology, Sociology.",
-    },
-    {
-      id: "languages",
-      name: "Languages & Literature",
-      description: "English Literature, French, Spanish, Literature in English.",
-    },
-    {
-      id: "arts",
-      name: "Creative Arts",
-      description: "Art & Design, Music, Drama & Theatre Studies.",
-    },
-  ],
-  highlights: [
-    "Cambridge International A-Levels (recognized by top universities globally)",
-    "WAEC A-Levels also available",
-    "Small tutorial groups for personalized attention",
-    "University application support (UCAS, Common App, etc.)",
-    "Extended Project Qualification (EPQ) available",
-    "Leadership opportunities and prefect roles",
-    "Strong university placement record (Oxbridge, Ivy League, top Nigerian universities)",
-    "Career mentoring and work experience programs",
-  ],
-};
+// export const sixthForm: KeyStage = {
+//   id: "sixth-form",
+//   name: "Sixth Form (A-Levels)",
+//   description: "Our Sixth Form (Years 12-13) offers Cambridge International A-Levels, providing rigorous academic preparation for university. Students typically study 3-4 A-Level subjects in depth, allowing for specialization while maintaining breadth. We also offer WAEC A-Levels for students pursuing Nigerian universities.",
+//   ageRange: "13-16 years",
+//   subjects: [
+//     {
+//       id: "sciences",
+//       name: "Sciences",
+//       description: "Mathematics, Further Mathematics, Physics, Chemistry, Biology, Computer Science.",
+//     },
+//     {
+//       id: "humanities",
+//       name: "Humanities & Social Sciences",
+//       description: "History, Geography, Economics, Business Studies, Psychology, Sociology.",
+//     },
+//     {
+//       id: "languages",
+//       name: "Languages & Literature",
+//       description: "English Literature, French, Spanish, Literature in English.",
+//     },
+//     {
+//       id: "arts",
+//       name: "Creative Arts",
+//       description: "Art & Design, Music, Drama & Theatre Studies.",
+//     },
+//   ],
+//   highlights: [
+//     "Cambridge International A-Levels (recognized by top universities globally)",
+//     "WAEC A-Levels also available",
+//     "Small tutorial groups for personalized attention",
+//     "University application support (UCAS, Common App, etc.)",
+//     "Extended Project Qualification (EPQ) available",
+//     "Leadership opportunities and prefect roles",
+//     "Strong university placement record (Oxbridge, Ivy League, top Nigerian universities)",
+//     "Career mentoring and work experience programs",
+//   ],
+// };
 
-export const allKeyStages: KeyStage[] = [keyStage3, keyStage4, sixthForm];
+export const allKeyStages: KeyStage[] = [keyStage3, keyStage4];
 

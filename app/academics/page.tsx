@@ -53,7 +53,7 @@ export default function AcademicsPage() {
             </p>
           </motion.div>
           
-          <div className="grid gap-8 md:grid-cols-3 mb-16">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 mb-20">
             {allKeyStages.map((stage, index) => (
               <motion.div
                 key={stage.id}
@@ -61,16 +61,21 @@ export default function AcademicsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="rounded-lg bg-white p-8 shadow-md"
+                className="group flex h-full flex-col rounded-2xl bg-white/95 p-8 shadow-lg ring-1 ring-brand-primary/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-brand-primary/40"
               >
-                <h2 className="mb-3 font-serif text-2xl font-bold text-brand-primary">
+                <div className="mb-4 h-1 w-14 rounded-full bg-brand-accent/80 group-hover:bg-brand-accent" />
+                <h2 className="mb-2 font-serif text-2xl md:text-3xl font-bold text-brand-primary">
                   {stage.name}
                 </h2>
-                <p className="mb-2 text-sm text-brand-accent">{stage.ageRange}</p>
-                <p className="mb-6 text-gray-600">{stage.description}</p>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-brand-accent">
+                  {stage.ageRange}
+                </p>
+                <p className="mb-6 text-sm md:text-base text-gray-700 leading-relaxed">
+                  {stage.description}
+                </p>
                 <Link
                   href={`/academics/${stage.id}`}
-                  className="inline-flex items-center gap-2 text-brand-accent font-semibold hover:text-brand-secondary transition-colors"
+                  className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-brand-accent transition-colors group-hover:text-brand-secondary"
                 >
                   Learn more
                   <ArrowRight className="h-4 w-4" />
