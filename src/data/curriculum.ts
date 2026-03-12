@@ -179,44 +179,46 @@ export const keyStage4: KeyStage = {
   ],
 };
 
-// export const sixthForm: KeyStage = {
-//   id: "sixth-form",
-//   name: "Sixth Form (A-Levels)",
-//   description: "Our Sixth Form (Years 12-13) offers Cambridge International A-Levels, providing rigorous academic preparation for university. Students typically study 3-4 A-Level subjects in depth, allowing for specialization while maintaining breadth. We also offer WAEC A-Levels for students pursuing Nigerian universities.",
-//   ageRange: "13-16 years",
-//   subjects: [
-//     {
-//       id: "sciences",
-//       name: "Sciences",
-//       description: "Mathematics, Further Mathematics, Physics, Chemistry, Biology, Computer Science.",
-//     },
-//     {
-//       id: "humanities",
-//       name: "Humanities & Social Sciences",
-//       description: "History, Geography, Economics, Business Studies, Psychology, Sociology.",
-//     },
-//     {
-//       id: "languages",
-//       name: "Languages & Literature",
-//       description: "English Literature, French, Spanish, Literature in English.",
-//     },
-//     {
-//       id: "arts",
-//       name: "Creative Arts",
-//       description: "Art & Design, Music, Drama & Theatre Studies.",
-//     },
-//   ],
-//   highlights: [
-//     "Cambridge International A-Levels (recognized by top universities globally)",
-//     "WAEC A-Levels also available",
-//     "Small tutorial groups for personalized attention",
-//     "University application support (UCAS, Common App, etc.)",
-//     "Extended Project Qualification (EPQ) available",
-//     "Leadership opportunities and prefect roles",
-//     "Strong university placement record (Oxbridge, Ivy League, top Nigerian universities)",
-//     "Career mentoring and work experience programs",
-//   ],
-// };
+export const sixthForm: KeyStage = {
+  id: "sixth-form",
+  name: "Sixth Form (A-Levels)",
+  description:
+    "Our Sixth Form (Years 12-13) offers Cambridge International A-Levels, providing rigorous academic preparation for university. Students typically study 3-4 A-Level subjects in depth, allowing for specialisation while maintaining breadth.",
+  ageRange: "Years 12-13",
+  subjects: [
+    {
+      id: "sciences",
+      name: "Sciences",
+      description:
+        "Mathematics, Further Mathematics, Physics, Chemistry, Biology, Computer Science.",
+    },
+    {
+      id: "humanities",
+      name: "Humanities & Social Sciences",
+      description:
+        "History, Geography, Economics, Business Studies, Psychology, Sociology.",
+    },
+    {
+      id: "languages",
+      name: "Languages & Literature",
+      description:
+        "English Literature, French, Literature in English and other language options where available.",
+    },
+    {
+      id: "arts",
+      name: "Creative Arts",
+      description: "Art & Design, Music, Drama & Theatre Studies.",
+    },
+  ],
+  highlights: [
+    "Cambridge International A-Levels (recognised by top universities globally)",
+    "Small tutorial groups for personalised support",
+    "University guidance and application support (UK, US, Canada and beyond)",
+    "Leadership opportunities and student responsibility roles",
+    "Independent research and enrichment opportunities",
+    "Career mentoring and work experience opportunities",
+  ],
+};
 
-export const allKeyStages: KeyStage[] = [keyStage3, keyStage4];
+export const allKeyStages: KeyStage[] = [keyStage3, keyStage4, sixthForm];
 
