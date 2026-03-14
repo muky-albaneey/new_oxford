@@ -12,7 +12,7 @@ import StudentLifeSection from "@/src/components/StudentLifeSection";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { BookOpen, Trophy, ArrowRight } from "lucide-react";
+import { Users, GraduationCap, BookOpen, Trophy, ArrowRight } from "lucide-react";
 import { brandConfig } from "@/src/config/brand";
 import { newsPosts } from "@/src/data/news";
 import { getUpcomingEvents } from "@/src/data/events";
@@ -70,7 +70,7 @@ export default function HomePage() {
         className="bg-brand-light py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: false, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto px-4">
@@ -81,7 +81,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <StudentImageGallery
@@ -145,7 +145,7 @@ export default function HomePage() {
                     transition={{ delay: index * 0.05 }}
                     className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg"
                   >
-                    <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" />
+                    <Image src={img.src} alt={img.alt} fill className="object-cover" />
                   </motion.div>
                 ))}
               </div>
@@ -162,7 +162,6 @@ export default function HomePage() {
                     fill
                     className="object-cover"
                     sizes="100vw"
-                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
@@ -254,7 +253,6 @@ export default function HomePage() {
                   alt="Students creating"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </motion.div>
@@ -269,7 +267,7 @@ export default function HomePage() {
             className="mb-8 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
             <h2 className="mb-4 font-serif text-3xl font-bold text-brand-primary md:text-4xl">
@@ -283,7 +281,7 @@ export default function HomePage() {
             className="mx-auto max-w-4xl"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="mb-6 text-center text-gray-700">
@@ -293,7 +291,7 @@ export default function HomePage() {
               className="text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
             >
@@ -330,13 +328,12 @@ export default function HomePage() {
                 alt="Student success"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
               className="lg:order-1"
             >
@@ -345,13 +342,13 @@ export default function HomePage() {
                 style={{ textTransform: 'uppercase' }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.6 }}
                 >
                   When Carefully Developed
@@ -360,7 +357,7 @@ export default function HomePage() {
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   Talent And Sheer Hard Work Meet
@@ -370,7 +367,7 @@ export default function HomePage() {
                   className="text-3xl md:text-4xl lg:text-5xl font-normal"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
                   Success
@@ -380,7 +377,7 @@ export default function HomePage() {
                   className="text-3xl md:text-4xl lg:text-5xl font-normal"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   Favours The
@@ -389,7 +386,7 @@ export default function HomePage() {
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
                   Bold
@@ -398,7 +395,7 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 whileHover={{ scale: 1.05 }}
               >
@@ -443,7 +440,7 @@ export default function HomePage() {
                 key={stage.title}
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: false, margin: "-50px" }}
                 transition={{ 
                   delay: index * 0.15,
                   type: "spring",
@@ -489,7 +486,7 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: false, margin: "-50px" }}
               transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
               whileHover={{ scale: 1.02 }}
               className="group relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg lg:col-span-2"
@@ -503,7 +500,6 @@ export default function HomePage() {
                   alt="Students on campus"
                   fill
                   className="object-cover transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 66vw"
                 />
               </motion.div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -511,7 +507,7 @@ export default function HomePage() {
                 className="absolute bottom-0 left-0 right-0 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <h3 className="mb-2 text-2xl font-bold text-white">Vibrant Campus Life</h3>
@@ -531,7 +527,6 @@ export default function HomePage() {
                   alt="Students in classroom"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -550,7 +545,6 @@ export default function HomePage() {
                   alt="Students socializing"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -572,7 +566,6 @@ export default function HomePage() {
                 alt="Campus facilities"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
             <motion.div
@@ -658,7 +651,6 @@ export default function HomePage() {
                 alt="Students playing sports"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -674,11 +666,10 @@ export default function HomePage() {
               className="group relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg"
             >
               <Image
-                src="/images/students/art.jpeg"
+                src="/images/students/drama.jpeg"
                 alt="Students in arts"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -698,7 +689,6 @@ export default function HomePage() {
                 alt="Students in STEM"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -752,7 +742,6 @@ export default function HomePage() {
                 alt="Special Educational Needs support at Oxford Manor College"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -795,7 +784,6 @@ export default function HomePage() {
                 alt="School library at Oxford Manor College"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
           </div>
@@ -817,7 +805,6 @@ export default function HomePage() {
                 alt="Meals and dining at Oxford Manor College"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -873,7 +860,6 @@ export default function HomePage() {
                 alt="Prefects and student leadership at Oxford Manor College"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
           </div>
@@ -902,7 +888,6 @@ export default function HomePage() {
                 alt="Public speaking and debate at Oxford Manor College"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -921,7 +906,6 @@ export default function HomePage() {
                 alt="Oxford Manor College at the United Nations – Children's Rights"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -940,7 +924,6 @@ export default function HomePage() {
                 alt="Students representing at the UN on Children's Rights"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -966,7 +949,6 @@ export default function HomePage() {
                 alt="Thursday aerobics and fitness at Oxford Manor College"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -1000,7 +982,6 @@ export default function HomePage() {
                 alt="Digital learning at Oxford Manor College"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -1073,7 +1054,6 @@ export default function HomePage() {
                 alt="Students learning"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
           </div>
