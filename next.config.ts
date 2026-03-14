@@ -5,10 +5,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
-  // Image optimization (default; ensure modern formats)
-  images: {
-    formats: ["image/avif", "image/webp"],
-  },
   // Headers for video files
   async headers() {
     return [
@@ -17,12 +13,6 @@ const nextConfig: NextConfig = {
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
           { key: "Accept-Ranges", value: "bytes" },
-        ],
-      },
-      {
-        source: "/images/:path*",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
     ];

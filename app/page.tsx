@@ -1,12 +1,14 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Layout from "@/src/components/Layout";
 import Hero from "@/src/components/Hero";
 import StatRow from "@/src/components/StatRow";
 import SectionHeading from "@/src/components/SectionHeading";
 import NewsCard from "@/src/components/NewsCard";
 import EventCard from "@/src/components/EventCard";
+import TestimonialCard from "@/src/components/TestimonialCard";
+import StudentImageGallery from "@/src/components/StudentImageGallery";
+import StudentLifeSection from "@/src/components/StudentLifeSection";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -14,21 +16,6 @@ import { BookOpen, Trophy, ArrowRight } from "lucide-react";
 import { brandConfig } from "@/src/config/brand";
 import { newsPosts } from "@/src/data/news";
 import { getUpcomingEvents } from "@/src/data/events";
-
-const StudentImageGallery = dynamic(
-  () => import("@/src/components/StudentImageGallery"),
-  { ssr: true }
-);
-
-const StudentLifeSection = dynamic(
-  () => import("@/src/components/StudentLifeSection"),
-  { ssr: true }
-);
-
-const TestimonialCard = dynamic(
-  () => import("@/src/components/TestimonialCard"),
-  { ssr: true }
-);
 
 export default function HomePage() {
   const stats = [
@@ -687,7 +674,7 @@ export default function HomePage() {
               className="group relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg"
             >
               <Image
-                src="/images/students/drama.jpeg"
+                src="/images/students/art.jpeg"
                 alt="Students in arts"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
