@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { brandConfig } from "@/src/config/brand";
 import { cn } from "@/src/lib/utils";
@@ -12,6 +12,23 @@ import MegaMenu from "./MegaMenu";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearCloseTimeout = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  };
+
+  const handleDropdownEnter = (label: string) => {
+    clearCloseTimeout();
+    setActiveDropdown(label);
+  };
+
+  const handleDropdownLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => setActiveDropdown(null), 150);
+  };
 
   const navItems = [
     {
@@ -112,8 +129,8 @@ export default function Header() {
                 <div
                   key={item.label}
                   className="relative"
-                  onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
+                  onMouseEnter={() => item.hasDropdown && handleDropdownEnter(item.label)}
+                  onMouseLeave={handleDropdownLeave}
                 >
                   <Link
                     href={item.href}
@@ -125,7 +142,9 @@ export default function Header() {
                     )}
                   </Link>
                   {item.hasDropdown && activeDropdown === item.label && (
-                    <MegaMenu items={item.dropdownItems!} />
+                    <div className="pt-2">
+                      <MegaMenu items={item.dropdownItems!} />
+                    </div>
                   )}
                 </div>
               ))}

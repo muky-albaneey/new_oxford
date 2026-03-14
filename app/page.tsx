@@ -128,6 +128,53 @@ export default function HomePage() {
                 },
               ]}
             />
+            {/* Additional moments: some, some1, some3, some4 + some2 bold */}
+            <div className="mt-12 space-y-8">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                {[
+                  { src: "/images/students/some.jpeg", alt: "School life at OMC" },
+                  { src: "/images/students/some1.jpeg", alt: "Student activities" },
+                  { src: "/images/students/some3.jpeg", alt: "School community" },
+                  { src: "/images/students/some4.jpeg", alt: "Life at Oxford Manor College" },
+                ].map((img, index) => (
+                  <motion.div
+                    key={img.src}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg"
+                  >
+                    <Image src={img.src} alt={img.alt} fill className="object-cover" />
+                  </motion.div>
+                ))}
+              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="overflow-hidden rounded-xl shadow-2xl ring-2 ring-brand-primary/20"
+              >
+                <div className="relative aspect-[21/9] w-full md:aspect-[3/1]">
+                  <Image
+                    src="/images/students/some2.jpeg"
+                    alt="Oxford Manor College – moments that matter"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+                    <p className="text-lg font-semibold tracking-wide text-white md:text-xl">
+                      Moments that define us
+                    </p>
+                    <p className="mt-1 text-sm text-white/90 md:text-base">
+                      {brandConfig.name} – where every day brings new discovery and growth
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </motion.section>
@@ -476,7 +523,7 @@ export default function HomePage() {
                 className="group relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg"
               >
                 <Image
-                  src="/images/students/learning.jpeg"
+                  src="/images/students/active.jpeg"
                   alt="Students in classroom"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -600,7 +647,7 @@ export default function HomePage() {
               className="group relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg"
             >
               <Image
-                src="/images/students/students-3.jpeg"
+                src="/images/students/sporty-2.jpeg"
                 alt="Students playing sports"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -664,7 +711,7 @@ export default function HomePage() {
             title: "Academic Excellence",
           },
           {
-            src: "/images/students/achievement-2.jpg",
+            src: "/images/students/sporty-2.jpeg",
             alt: "Sports champions",
             title: "Championship Winners",
           },
@@ -679,6 +726,279 @@ export default function HomePage() {
           href: "/school-life",
         }}
       />
+
+      {/* Special Educational Needs (SEN) */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg"
+            >
+              <Image
+                src="/images/students/SEN%20.jpeg"
+                alt="Special Educational Needs support at Oxford Manor College"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <SectionHeading
+                title="Special Educational Needs (SEN)"
+                subtitle="Inclusive support so every scholar can thrive"
+              />
+              <p className="mb-6 text-gray-700">
+                At {brandConfig.name} we offer dedicated Special Educational Needs provision. Our SEN support is designed to help scholars with additional learning needs access the curriculum, build confidence, and achieve their potential in a caring, structured environment.
+              </p>
+              <p className="text-gray-600">
+                We work in partnership with families and specialists to tailor support, whether that is in-class adjustments, targeted interventions, or access arrangements for assessments. Every child is valued and supported to participate fully in school life.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Library */}
+      <section className="bg-brand-light py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
+              <SectionHeading
+                title="Library & Learning Resources"
+                subtitle="A space for study, research, and discovery"
+              />
+              <p className="mb-6 text-gray-700">
+                Our library is a hub for independent learning and reading. Scholars have access to a wide range of books, digital resources, and quiet study areas, supported by staff who help them develop research skills and a love of reading.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg order-1 lg:order-2"
+            >
+              <Image
+                src="/images/students/libry3.jpeg"
+                alt="School library at Oxford Manor College"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meals & Food Options */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg"
+            >
+              <Image
+                src="/images/students/meal.jpeg"
+                alt="Meals and dining at Oxford Manor College"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <SectionHeading
+                title="Meals & Food Options"
+                subtitle="Head Start, lunch, and more – diverse and nutritious"
+              />
+              <p className="mb-4 text-gray-700">
+                We believe good nutrition supports learning and wellbeing. Our meal provision includes:
+              </p>
+              <ul className="mb-6 space-y-2 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-brand-primary" />
+                  <span><strong>Head Start</strong> – morning snacks to help scholars focus and stay energised.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-brand-primary" />
+                  <span><strong>Lunch</strong> – a full lunch offering with diverse local and international options so every scholar can enjoy balanced, tasty meals.</span>
+                </li>
+              </ul>
+              <p className="text-gray-600">
+                Our catering team works to provide variety, quality, and options that suit different tastes and dietary needs, helping scholars stay healthy and ready to learn.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Prefectships & Leadership */}
+      <section className="bg-brand-light py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
+              <SectionHeading
+                title="Prefectships & Leadership"
+                subtitle="Grooming scholars to lead with responsibility"
+              />
+              <p className="mb-6 text-gray-700">
+                Through our prefectship system we train scholars to become better leaders in society. Prefects take on real responsibility, support their peers, and help shape the daily life of the school. We use these roles to teach accountability, teamwork, and service.
+              </p>
+              <p className="text-gray-600">
+                From year-group prefects to senior prefects and heads of house, scholars learn to lead by example, communicate clearly, and contribute to a positive, orderly community. These experiences prepare them for leadership beyond school.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg order-1 lg:order-2"
+            >
+              <Image
+                src="/images/students/prefect.jpeg"
+                alt="Prefects and student leadership at Oxford Manor College"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Public Speaking & UN Visit */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            title="Public Speaking & Voice"
+            subtitle="Confident communication and global platforms"
+          />
+          <p className="mx-auto mb-12 max-w-3xl text-center text-gray-700">
+            We train our scholars to speak publicly and confidently. From debates and presentations to representing the school on national and international stages, they learn to articulate ideas clearly and with conviction. Our students were invited to the United Nations to speak on Children&apos;s Rights – a powerful example of how we prepare them to lead and be heard.
+          </p>
+          <div className="grid gap-6 md:grid-cols-3">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg"
+            >
+              <Image
+                src="/images/students/speak.jpeg"
+                alt="Public speaking and debate at Oxford Manor College"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="font-semibold text-white">Speaking with confidence</p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg"
+            >
+              <Image
+                src="/images/students/un.jpeg"
+                alt="Oxford Manor College at the United Nations – Children's Rights"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="font-semibold text-white">At the UN – Children&apos;s Rights</p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg"
+            >
+              <Image
+                src="/images/students/prefect1.jpeg"
+                alt="Students representing at the UN on Children's Rights"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="font-semibold text-white">Our voice at the UN</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Thursday Aerobics & Fitness */}
+      <section className="bg-brand-light py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg"
+            >
+              <Image
+                src="/images/students/aerobic.jpeg"
+                alt="Thursday aerobics and fitness at Oxford Manor College"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <SectionHeading
+                title="Thursday Aerobics & Fitness"
+                subtitle="Keeping our community active and healthy"
+              />
+              <p className="mb-6 text-gray-700">
+                Every Thursday we run aerobics and fitness sessions for our scholars. These sessions promote physical health, teamwork, and a positive routine, helping students stay active and energised as part of the school week.
+              </p>
+              <p className="text-gray-600">
+                From group aerobics to structured fitness activities, we make sure that movement and wellbeing are a regular part of life at {brandConfig.name}.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Digital Learning */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg"
+            >
+              <Image
+                src="/images/students/new1.jpeg"
+                alt="Digital learning at Oxford Manor College"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <SectionHeading
+                title="Digital Learning"
+                subtitle="Modern, effective teaching for every student"
+              />
+              <p className="mb-6 text-gray-700">
+                At {brandConfig.name} we merge digital learning into our system so that teaching is more modern and effective for our students. Technology supports classroom learning, research, and collaboration, helping scholars develop the skills they need for tomorrow&apos;s world.
+              </p>
+              <p className="text-gray-600">
+                From interactive resources and online platforms to technology-enabled classrooms, we use digital tools to deepen understanding, personalise support, and keep learning engaging and relevant.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Large Text Section - Knowledge */}
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-white py-32">
